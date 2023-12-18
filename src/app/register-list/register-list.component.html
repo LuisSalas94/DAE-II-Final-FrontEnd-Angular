@@ -1,0 +1,32 @@
+<h2>Register List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Student Course</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let register of registers">
+      <td>{{ register.studentName }}</td>
+      <td>{{ register.studentCourse }}</td>
+      <td>{{ register.dateCreated | date }}</td>
+      <td>
+        <button
+          (click)="updateRegister(register.id)"
+          class="btn btn-outline-info btn-sm"
+        >
+          Update
+        </button>
+        <button
+          (click)="deleteRegister(register.id)"
+          class="btn btn-outline-danger mx-2 btn-sm"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

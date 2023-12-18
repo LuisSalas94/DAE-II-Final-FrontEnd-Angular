@@ -1,0 +1,38 @@
+<div class="col-md-6 offset-md-3 mt-3">
+  <h3>Update Register</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Student Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="studentName"
+        [(ngModel)]="register.studentName"
+        name="studentName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Student Course</label>
+      <input
+        type="text"
+        class="form-control"
+        id="studentCourse"
+        [(ngModel)]="register.studentCourse"
+        name="studentCourse"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dateCreated"
+        [(ngModel)]="register.dateCreated"
+        name="dateCreated"
+      />
+    </div>
+    <button class="btn btn-outline-success mt-3" type="submit">Submit</button>
+  </form>
+</div>
